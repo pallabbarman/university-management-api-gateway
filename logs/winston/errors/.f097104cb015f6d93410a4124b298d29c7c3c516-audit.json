@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\.f097104cb015f6d93410a4124b298d29c7c3c516-audit.json",
+    "files": [
+        {
+            "date": 1695830992296,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-09-27-22.log",
+            "hash": "c83207f51539a9fe9478d64cabdfb6a3220b32b87ee85bca204f0d6721f88235"
+        },
+        {
+            "date": 1695871791856,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-09-28-09.log",
+            "hash": "8a31302bbad17694ea5b36f904b4a8dc7f2e749011af2c866f72c6ade790c635"
+        }
+    ],
+    "hashType": "sha256"
+}
