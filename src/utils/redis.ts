@@ -1,8 +1,9 @@
+import configs from 'configs/index';
 import { createClient } from 'redis';
 import { logger } from './logger';
 
 const redisClient = createClient({
-    url: 'redis://localhost:6379',
+    url: configs.redis.url,
 });
 
 redisClient.on('error', (err) => logger.error('RedisError', err));

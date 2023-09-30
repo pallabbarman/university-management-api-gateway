@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Prisma } from '@prisma/client';
+import { AxiosError } from 'axios';
 import configs from 'configs/index';
 import ApiError from 'errors/apiError';
-import handleClientError from 'errors/handleClientError';
-import handleValidationError from 'errors/handleValidationError';
 import handleZodError from 'errors/handleZodError';
 import { ErrorRequestHandler } from 'express';
 import httpStatus from 'http-status';
@@ -21,16 +19,10 @@ const globalErrorHandlers: ErrorRequestHandler = (err, _req, res, _next) => {
     let message = 'Internal server error!';
     let errorMessages: IGenericErrorMessage[] = [];
 
-    if (err instanceof Prisma.PrismaClientValidationError) {
-        const error = handleValidationError(err);
-        statusCode = error.statusCode;
-        message = error.message;
-        errorMessages = error.errorMessage;
-    } else if (err instanceof Prisma.PrismaClientKnownRequestError) {
-        const error = handleClientError(err);
-        statusCode = error.statusCode;
-        message = error.message;
-        errorMessages = error.errorMessage;
+    if (err instanceof AxiosError) {
+        statusCode = err.response?.status || httpStatus.INTERNAL_SERVER_ERROR;
+        message = err.response?.data?.message || 'Something went wrong!';
+        errorMessages = err.response?.data.errorMessage || [];
     } else if (err instanceof ZodError) {
         const error = handleZodError(err);
         statusCode = error.statusCode;

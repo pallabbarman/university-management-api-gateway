@@ -6,14 +6,14 @@
     "auditLog": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\successes\\.00610c9fa6d83d31af8900bcd8ee3a3cda5ec8a6-audit.json",
     "files": [
         {
-            "date": 1695830992288,
-            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\successes\\success-2023-09-27-22.log",
-            "hash": "6134ca067d93fa389e0c37e5ee15eb163820ddba1c4a75acca785e3ed1269115"
+            "date": 1695970679333,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\successes\\success-2023-09-29-12.log",
+            "hash": "b27fdb802f02085c4e1d3c89d20a32ec17ea77341cd0fa99f311f2e6cb046d94"
         },
         {
-            "date": 1695871791850,
-            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\successes\\success-2023-09-28-09.log",
-            "hash": "a1c9fd1d36260552a44e073314be14d9a2c0a3989596e982871dc555acba9f16"
+            "date": 1695971375875,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\successes\\success-2023-09-29-13.log",
+            "hash": "1c68eefdb96bc7f254be66cfe14a3bbe3d38cf2235342a8d9e2db5c1bff85146"
         }
     ],
     "hashType": "sha256"

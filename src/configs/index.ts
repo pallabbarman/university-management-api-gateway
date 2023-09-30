@@ -1,20 +1,32 @@
 import dotenv from 'dotenv';
 import path from 'path';
+import z from 'zod';
 
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
+const envVarsZodSchema = z.object({
+    NODE_ENV: z.string(),
+    PORT: z
+        .string()
+        .default('5000')
+        .refine((val) => Number(val)),
+    JWT_SECRET: z.string(),
+    REDIS_URL: z.string(),
+    AUTH_SERVICE_URL: z.string(),
+    CORE_SERVICE_URL: z.string(),
+});
+
+const envVars = envVarsZodSchema.parse(process.env);
+
 export default {
-    env: process.env.NODE_ENV,
-    port: process.env.PORT,
-    database_url: process.env.DATABASE_URL,
-    default_student_pass: process.env.DEFAULT_STUDENT_PASS,
-    default_faculty_pass: process.env.DEFAULT_FACULTY_PASS,
-    default_admin_pass: process.env.DEFAULT_ADMIN_PASS,
-    bcrypt_salt_round: process.env.BCRYPT_SALT_ROUND,
+    env: envVars.NODE_ENV,
+    port: envVars.PORT,
     jwt: {
-        secret: process.env.JWT_SECRET,
-        refresh_token: process.env.JWT_REFRESH_SECRET,
-        expires_in: process.env.JWT_EXPIRES_IN,
-        refresh_expire_in: process.env.JWT_REFRESH_EXPIRES_IN,
+        secret: envVars.JWT_SECRET,
     },
+    redis: {
+        url: envVars.REDIS_URL,
+    },
+    authServiceUrl: envVars.AUTH_SERVICE_URL,
+    coreServiceUrl: envVars.CORE_SERVICE_URL,
 };
