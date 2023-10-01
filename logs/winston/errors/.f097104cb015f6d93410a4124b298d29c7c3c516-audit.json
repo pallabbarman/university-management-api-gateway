@@ -14,6 +14,16 @@
             "date": 1695971375881,
             "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-09-29-13.log",
             "hash": "25f72452e8ee6252bc51d3cf4d23a464050f8f5ad40ae8d1ab11f5c56b1829dd"
+        },
+        {
+            "date": 1696174768582,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-10-01-21.log",
+            "hash": "3b811f607a5d5e45ca6bd736a54737e02f5eded659fa374a7013ea2824810103"
+        },
+        {
+            "date": 1696176136521,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-10-01-22.log",
+            "hash": "71d8f4e02e9a2be9e6ad6e6e996cbaee3463671bdabd2bdc091467d52f4ac412"
         }
     ],
     "hashType": "sha256"
