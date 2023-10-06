@@ -24,6 +24,21 @@
             "date": 1696176136521,
             "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-10-01-22.log",
             "hash": "71d8f4e02e9a2be9e6ad6e6e996cbaee3463671bdabd2bdc091467d52f4ac412"
+        },
+        {
+            "date": 1696526397159,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-10-05-23.log",
+            "hash": "3be502c94f47c04e4c111f5d4de4b666371f7e354e6b1f0030cb5f4b95dcc8f2"
+        },
+        {
+            "date": 1696564078767,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-10-06-09.log",
+            "hash": "ead33c40b7ec876690525b03c82ecaae630f38a0f4b2948ea1ea8499c076f6af"
+        },
+        {
+            "date": 1696565250483,
+            "name": "D:\\Web Development\\Next Level\\UM-ApiGateway\\logs\\winston\\errors\\error-2023-10-06-10.log",
+            "hash": "25cad4f80b74411ddeb0689600a891f36ae5af5642530595c72dd489326122d6"
         }
     ],
     "hashType": "sha256"

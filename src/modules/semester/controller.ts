@@ -1,18 +1,40 @@
-/* eslint-disable import/prefer-default-export */
-
 import { Request, Response } from 'express';
-import httpStatus from 'http-status';
 import catchAsync from 'utils/catchAsync';
 import sendResponse from 'utils/sendResponse';
-import { insertSemester } from './service';
+import {
+    editSemester,
+    findAllSemesters,
+    findSemester,
+    insertSemester,
+    removeSemester,
+} from './service';
 
 export const createSemester = catchAsync(async (req: Request, res: Response) => {
     const result = await insertSemester(req);
 
-    sendResponse(res, {
-        statusCode: httpStatus.OK,
-        success: true,
-        message: 'Semester is created successfully!',
-        data: result,
-    });
+    sendResponse(res, result);
+});
+
+export const getAllSemesters = catchAsync(async (req: Request, res: Response) => {
+    const result = await findAllSemesters(req);
+
+    sendResponse(res, result);
+});
+
+export const getSemester = catchAsync(async (req: Request, res: Response) => {
+    const result = await findSemester(req);
+
+    sendResponse(res, result);
+});
+
+export const updateSemester = catchAsync(async (req: Request, res: Response) => {
+    const result = await editSemester(req);
+
+    sendResponse(res, result);
+});
+
+export const deleteSemester = catchAsync(async (req: Request, res: Response) => {
+    const result = await removeSemester(req);
+
+    sendResponse(res, result);
 });
