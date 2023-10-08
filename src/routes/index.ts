@@ -2,7 +2,9 @@ import { Router } from 'express';
 import academicFacultyRoutes from 'modules/academicFaculty/route';
 import adminRoutes from 'modules/admin/route';
 import buildingRoutes from 'modules/building/route';
+import courseRoutes from 'modules/course/route';
 import departmentRoutes from 'modules/department/route';
+import facultyRoutes from 'modules/faculty/route';
 import semesterRoutes from 'modules/semester/route';
 import userRoutes from 'modules/user/route';
 
@@ -16,6 +18,10 @@ const moduleRoutes = [
     {
         path: '/admins',
         route: adminRoutes,
+    },
+    {
+        path: '/faculties',
+        route: facultyRoutes,
     },
     {
         path: '/semesters',
@@ -37,10 +43,10 @@ const moduleRoutes = [
     //     path: '/rooms',
     //     route: roomRoutes,
     // },
-    // {
-    //     path: '/courses',
-    //     route: courseRoutes,
-    // },
+    {
+        path: '/courses',
+        route: courseRoutes,
+    },
     // {
     //     path: '/semester-registration',
     //     route: semesterRegistrationRoutes,
