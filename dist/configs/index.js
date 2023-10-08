@@ -17,6 +17,9 @@ const envVarsZodSchema = zod_1.default.object({
     REDIS_URL: zod_1.default.string(),
     AUTH_SERVICE_URL: zod_1.default.string(),
     CORE_SERVICE_URL: zod_1.default.string(),
+    CLOUDINARY_CLOUD_NAME: zod_1.default.string(),
+    CLOUDINARY_API_KEY: zod_1.default.string(),
+    CLOUDINARY_API_SECRET: zod_1.default.string(),
 });
 const envVars = envVarsZodSchema.parse(process.env);
 exports.default = {
@@ -30,4 +33,9 @@ exports.default = {
     },
     authServiceUrl: envVars.AUTH_SERVICE_URL,
     coreServiceUrl: envVars.CORE_SERVICE_URL,
+    cloudinary: {
+        cloudName: envVars.CLOUDINARY_CLOUD_NAME,
+        apiKey: envVars.CLOUDINARY_API_KEY,
+        apiSecret: envVars.CLOUDINARY_API_SECRET,
+    },
 };
